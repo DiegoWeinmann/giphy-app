@@ -13,6 +13,7 @@ export const Home: React.FunctionComponent<RouteComponentProps> = () => {
 
   return (
     <div>
+      <h1>Giphy App</h1>
       <form onSubmit={handleSubmit}>
         <input
           type='text'

@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import { RouteComponentProps } from 'wouter';
+import './GifsList.css';
 import { GiphyItem } from 'types';
-import { getGifs } from 'services/getGifs';
-import { Gif, Spinner } from 'components';
+import { Gif } from 'components';
 
 interface IGifsList {
   gifs: GiphyItem[];
@@ -11,7 +10,7 @@ interface IGifsList {
 
 export const GifsList: React.FC<IGifsList> = ({ gifs }) => {
   return (
-    <>
+    <div className='GifsList'>
       {gifs.map((gif) => (
         <Gif
           key={gif.id}
@@ -20,6 +19,6 @@ export const GifsList: React.FC<IGifsList> = ({ gifs }) => {
           title={gif.title}
         />
       ))}
-    </>
+    </div>
   );
 };

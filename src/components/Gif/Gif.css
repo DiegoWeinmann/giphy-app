@@ -1,13 +1,32 @@
 .Gif {
+  width: 45%;
   border: 1px solid #eee;
   border-radius: 6px;
   margin-bottom: 1rem;
+  margin-right: 5%;
   background: #282c342d;
-  padding: 1rem;
+  position: relative;
+}
+
+.Gif h4 {
+  width: 50%;
+  padding: 0.2rem;
+  border-radius: 6px;
+  margin: 0 auto 0.2rem auto;
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .Gif img {
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   border-radius: 6px;
 }

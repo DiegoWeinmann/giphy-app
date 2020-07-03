@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import { RouteComponentProps } from 'wouter';
 import { Spinner, GifsList } from 'components';
-import { GiphyItem } from 'types';
-import { getGifs } from 'services/getGifs';
+import { useGifs } from 'hooks';
 
 export const SearchResults: React.FunctionComponent<RouteComponentProps> = ({
   params,
 }) => {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [gifs, setGifs] = useState<GiphyItem[]>([]);
-
-  useEffect(() => {
-    setLoading(true);
-    getGifs({ keyword: params.keyword }).then((response) => {
-      setGifs(response.data);
-      setLoading(false);
-    });
-  }, [params.keyword]);
-
+  const { loading, gifs } = useGifs({ keyword: params.keyword });
   return <div>{loading ? <Spinner /> : <GifsList gifs={gifs} />}</div>;
 };
