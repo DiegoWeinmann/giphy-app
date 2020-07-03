@@ -1,11 +1,12 @@
 .Gif {
   width: 45%;
-  border: 1px solid #eee;
+  border: 2px solid rgb(68, 68, 68);
   border-radius: 6px;
   margin-bottom: 1rem;
   margin-right: 5%;
   background: #282c342d;
   position: relative;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .Gif h4 {

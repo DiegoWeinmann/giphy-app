@@ -3,7 +3,8 @@
 }
 
 body {
-  padding: 1rem;
+  padding: 0.5rem;
+  background: rgb(157, 186, 255);
 }
 
 .App {
