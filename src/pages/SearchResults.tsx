@@ -8,7 +8,11 @@ function SearchResults({
   params,
 }: React.PropsWithChildren<RouteComponentProps>) {
   const { loading, gifs } = useGifs({ keyword: params.keyword });
-  return <div>{loading ? <Spinner /> : <GifsList gifs={gifs} />}</div>;
+  return (
+    <div>
+      {loading ? <Spinner /> : <GifsList gifs={gifs} loading={loading} />}
+    </div>
+  );
 }
 
 export { SearchResults };

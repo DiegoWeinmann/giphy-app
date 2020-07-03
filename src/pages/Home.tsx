@@ -6,7 +6,7 @@ import { GifsList } from 'components';
 
 export const Home: React.FunctionComponent<RouteComponentProps> = () => {
   const [keyword, setKeyword] = useState<string>('');
-  const [path, pushLocation] = useLocation();
+  const [, pushLocation] = useLocation();
 
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -26,7 +26,7 @@ export const Home: React.FunctionComponent<RouteComponentProps> = () => {
         />
       </form>
       <h4>Last search</h4>
-      <GifsList gifs={gifs} />
+      <GifsList gifs={gifs} loading={loading} />
     </div>
   );
 };
