@@ -1,0 +1,13 @@
+.Gif {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  background: #282c342d;
+  padding: 1rem;
+}
+
+.Gif img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
